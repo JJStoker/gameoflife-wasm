@@ -1,3 +1,10 @@
-import * as wasm from "wasm";
+import { Universe } from "wasm";
+const pre = document.getElementById("canvas");
+const universe = Universe.new();
+const renderLoop = () => {
+  pre.textContent = universe.render();
+  universe.tick();
 
-wasm.greet("test");
+  requestAnimationFrame(renderLoop);
+};
+requestAnimationFrame(renderLoop);
