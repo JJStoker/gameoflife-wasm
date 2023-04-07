@@ -1,3 +1,3 @@
 import * as wasm from "wasm";
 
-wasm.greet();
+wasm.greet("test");

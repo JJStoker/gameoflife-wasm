@@ -14,6 +14,6 @@ extern {
 }
 
 #[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, wasm-gol!");
+pub fn greet(name: &str) {
+    alert(&format!("Hello, {}", name));
 }
